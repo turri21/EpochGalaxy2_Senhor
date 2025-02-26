@@ -53,20 +53,20 @@ module sys_top
 	output        HDMI_TX_HS,
 	output        HDMI_TX_VS,
 	
-//	input         HDMI_TX_INT,
+	input         HDMI_TX_INT,
 
 	//////////// SDR ///////////
 	output [12:0] SDRAM_A,
 	inout  [15:0] SDRAM_DQ,
-//	output        SDRAM_DQML,
-//	output        SDRAM_DQMH,
+	output        SDRAM_DQML,
+	output        SDRAM_DQMH,
 	output        SDRAM_nWE,
 	output        SDRAM_nCAS,
 	output        SDRAM_nRAS,
 	output        SDRAM_nCS,
 	output  [1:0] SDRAM_BA,
 	output        SDRAM_CLK,
-//	output        SDRAM_CKE,
+	output        SDRAM_CKE,
 
 `ifdef DUAL_SDRAM
 	////////// SDR #2 //////////
@@ -1087,8 +1087,8 @@ altddio_out
 )
 hdmiclk_ddr
 (
-	.datain_h(1'b1),
-	.datain_l(1'b0),
+	.datain_h(1'b0),
+	.datain_l(1'b1),
 	.outclock(hdmi_tx_clk),
 	.dataout(HDMI_TX_CLK),
 	.aclr(1'b0),
