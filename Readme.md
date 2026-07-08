@@ -1,3 +1,8 @@
+=(EpochGalaxyII_Senhor notes)=-
+
+Tested: Working Video 720p, 1080p & Sound.
+
+___
 # Port of Epoch Galaxy II for MiSTer FPGA
 
 Remap game buttons and use the skill level select for game mode.
